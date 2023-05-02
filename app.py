@@ -61,7 +61,7 @@ with st.container():
 
 #%% ---- First Sets of Results----
 
-img_pv = Image.open("images/pv.jpg")
+img_pv = Image.open("images/pv.png")
 # Scale down the image by half
 new_width = 300
 new_height = 300
