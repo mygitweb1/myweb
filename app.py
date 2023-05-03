@@ -24,7 +24,7 @@ def add_bg_from_local(image_file):
     """,
     unsafe_allow_html=True
     )
-add_bg_from_local('images/bg.jpg')   
+add_bg_from_local('images/bg.png')   
 
 # st.image('https://wallpaperboat.com/wp-content/uploads/2019/10/free-website-background-07.jpg')
 
@@ -54,10 +54,10 @@ img_lottie_animation = Image.open("images/V.png")
 
 #%% ---- HEADER SECTION ----
 with st.container():
-    st.subheader("Designed by 'Sajad Salavatidezfouli' ")
-    st.title("Results of post-processing of the simulation of XXX")
+    st.subheader("Designed by 'QTool' ")
+    st.title("Results of post-processing of the simulation")
     #st.write("[Learn More about Arash](https://www.linkedin.com/in/arash-hajisharifi-275173101/?originalSubdomain=it)")
-    st.write("[My personal website](https://it.linkedin.com/in/sajad-salavatidezfouli-26477978/it?trk=org-employees)")
+    # st.write("[My personal website](https://it.linkedin.com/in/sajad-salavatidezfouli-26477978/it?trk=org-employees)")
 
 #%% ---- First Sets of Results----
 
@@ -96,22 +96,20 @@ with st.container():
 
 #%% ---- PP ----
 
-img_v = Image.open("images/V.png")
-img_T = Image.open("images/T.png")
-img_P = Image.open("images/P.png")
-img_meshes = Image.open("images/Meshes.png")
-img_VT_center = Image.open("images/CenterLine.png")
-img_MeshIndep = Image.open("images/MeshIndep.png")
-img_Valid = Image.open("images/Valid.png")
+img_v = Image.open("images/1.png")
+img_T = Image.open("images/2.png")
+img_P = Image.open("images/3.png")
+img_meshes = Image.open("images/4.png")
+img_VT_center = Image.open("images/5.png")
 
 with st.container():
     st.write("---")
     st.header("Visualization")
-    st.markdown("<span style='color:yellow;'>This part includes all the visualization data including <em>Mesh, Contours, Vectors</em> and <em>Streamlines</em>.</span>", unsafe_allow_html=True)
+    st.markdown("<span style='color:yellow;'>This part includes all the visualization data ", unsafe_allow_html=True)
 
     #Mesh    
     st.subheader("")
-    st.markdown("<span style='color:lightblue; font-size:30px;'>Mesh</span>", unsafe_allow_html=True)
+    st.markdown("<span style='color:lightblue; font-size:30px;'>XY View</span>", unsafe_allow_html=True)
   
     st.write("##")
     col1, col2, col3 = st.columns([1, 3, 1])
@@ -121,21 +119,10 @@ with st.container():
 
 
 
-    #velocity    
-    st.subheader("")
-    st.markdown("<span style='color:lightblue; font-size:30px;'>Velocity Field</span>", unsafe_allow_html=True)
-  
-    st.write("##")
-    col1, col2, col3 = st.columns([1, 3, 1])
-    
-    with col2:
-        st.image(img_v)
-
-
 
     #Temperature    
     st.subheader("")
-    st.markdown("<span style='color:lightblue; font-size:30px;'>Temperature Field</span>", unsafe_allow_html=True)
+    st.markdown("<span style='color:lightblue; font-size:30px;'>YZ View</span>", unsafe_allow_html=True)
   
     st.write("##")
     col1, col2, col3 = st.columns([1, 3, 1])
@@ -147,7 +134,7 @@ with st.container():
 
     #Pressure    
     st.subheader("")
-    st.markdown("<span style='color:lightblue; font-size:30px;'>Pressure Field</span>", unsafe_allow_html=True)
+    st.markdown("<span style='color:lightblue; font-size:30px;'>ZX View Field</span>", unsafe_allow_html=True)
   
     st.write("##")
     col1, col2, col3 = st.columns([1, 3, 1])
@@ -158,22 +145,23 @@ with st.container():
 
 
 
-    #Mesh Independency    
+
+
+    #velocity    
     st.subheader("")
-    st.markdown("<span style='color:lightblue; font-size:30px;'>Mesh Independency</span>", unsafe_allow_html=True)
+    st.markdown("<span style='color:lightblue; font-size:30px;'>3D View</span>", unsafe_allow_html=True)
   
     st.write("##")
     col1, col2, col3 = st.columns([1, 3, 1])
     
     with col2:
-        st.image(img_MeshIndep)
-
+        st.image(img_v)
 
 
 
     #Centerline Velocity and Temperature    
     st.subheader("")
-    st.markdown("<span style='color:lightblue; font-size:30px;'>Centerline Velocity and Temperature</span>", unsafe_allow_html=True)
+    st.markdown("<span style='color:lightblue; font-size:30px;'>3D View</span>", unsafe_allow_html=True)
   
     st.write("##")
     col1, col2, col3 = st.columns([1, 3, 1])
@@ -182,17 +170,6 @@ with st.container():
         st.image(img_VT_center)
 
 
-
-
-    #Validation  
-    st.subheader("")
-    st.markdown("<span style='color:lightblue; font-size:30px;'>Validation</span>", unsafe_allow_html=True)
-  
-    st.write("##")
-    col1, col2, col3 = st.columns([1, 3, 1])
-    
-    with col2:
-        st.image(img_Valid)
 
 
 
